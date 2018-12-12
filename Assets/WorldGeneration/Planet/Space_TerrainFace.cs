@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Space_TerrainFace{
 
-
+    //Variables used in the constructor
     ShapeGenerator shapeGenerator;
     Mesh mesh;
     int resolution;
@@ -12,6 +12,8 @@ public class Space_TerrainFace{
     Vector3 axisA;
     Vector3 axisB;
 
+
+    //Constructor that is called every time this function is called
     public Space_TerrainFace(ShapeGenerator shapeGenerator, Mesh mesh, int resolution, Vector3 localUp)
     {
         this.shapeGenerator = shapeGenerator;
@@ -41,7 +43,7 @@ public class Space_TerrainFace{
                 
 
 
-
+                //Math... very confusing math
                 if (x != resolution - 1 && y != resolution - 1)
                 {
                     triangles[triIndex] = i;
@@ -56,7 +58,7 @@ public class Space_TerrainFace{
 
             }
         }
-        //mesh.Clear();
+        mesh.Clear();
         mesh.vertices = vertices;
         mesh.triangles = triangles;
         mesh.RecalculateNormals();

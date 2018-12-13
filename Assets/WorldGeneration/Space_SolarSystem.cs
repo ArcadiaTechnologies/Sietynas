@@ -17,7 +17,7 @@ public class Space_SolarSystem : MonoBehaviour {
             float yAxis = Random.Range(-10000, 10000);
             float zAxis = Random.Range(-10000, 10000);
             planet.transform.position = new Vector3(xAxis, yAxis, zAxis);
-           // Instantiate(planet);
+            Instantiate(planet);
         }
     }
 
